@@ -1,5 +1,5 @@
 # AutoWave - Automatic Audio Classification Library
-<p align="center"><img src="https://github.com/TechyNilesh/DeepTextSearch/blob/main/logo/DeepTextSearch%20Logo-2.png?raw=true" alt="Brain+Machine" height="218" width="350"></p>
+<p align="center"><img src="https://github.com/TechyNilesh/AutoWave/blob/main/logo/autowave_logo.png?raw=true" alt="Brain+Machine"></p>
 
 **AutoWave** is an complete audio automatic classification library with other features plottings,audio agumentaion, data loading etc.
 
