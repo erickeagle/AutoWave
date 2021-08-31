@@ -21,7 +21,7 @@ def audioConversion(audioname,input_format,output_format):
         except:
             print("ERROR CONVERTING " + str(audioname))
 
-def augumentFolderRate(audioname,input_path,input_format,output_format):
+def audioConversionFolder(audioname,input_path,input_format,output_format):
     '''
     This function is used to convert the format of  audio file into another in a folder.
     '''

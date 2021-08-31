@@ -17,7 +17,7 @@ class plotOneFile():
     '''
     This class is used to plot for single file 
     '''
-    def time_freq_domain(self,filename): 
+    def time_freq_domain(filename): 
         '''
         Plot time and frequency domain
         ''' 
@@ -33,7 +33,7 @@ class plotOneFile():
         fig.suptitle('Frequency and Time Domain'+' '+os.path.basename(filename))
         fig.tight_layout()
         
-    def freq_domain(self,filename):
+    def freq_domain(filename):
         '''
         Plot frequency domain
         '''
@@ -54,7 +54,7 @@ class plotOneFile():
         plt.plot(time,data)
         plt.title('Time Domain'+' '+os.path.basename(filename))
         
-    def waveplot(self,filename):
+    def waveplot(filename):
         '''
         Plot waveplot
         '''
@@ -63,7 +63,7 @@ class plotOneFile():
         librosa.display.waveplot(data, sr=sr)
         plt.title('Waveplot')
         
-    def spectrogram(self,filename):
+    def spectrogram(filename):
         '''
         Plot Spectrogram
         '''
@@ -75,7 +75,7 @@ class plotOneFile():
         plt.colorbar()
         plt.title('Spectrogram')
         
-    def spectral_centroid(self,filename):
+    def spectral_centroid(filename):
         '''
         Plot Spectral centroid
         '''
@@ -89,7 +89,7 @@ class plotOneFile():
         plt.plot(t, minmax_scale(spectral_centroids,axis=0),color='r')
         plt.title('Spetral Centroid')
         
-    def spectral_rolloff(self,filename):
+    def spectral_rolloff(filename):
         '''
         Plot Spectral rolloff
         '''
@@ -103,7 +103,7 @@ class plotOneFile():
         plt.plot(t, minmax_scale(spectral_rolloff,axis=0), color='r')
         plt.title('Spectral Rolloff')
     
-    def spectral_brandwidth(self,filename):
+    def spectral_brandwidth(filename):
         '''
         Plot Spectral brandwidth
         '''
@@ -128,7 +128,7 @@ class plotMultipleFile():
     This class is used for plotting of multiple files by default is 10
     '''
                 
-    def time_freq_domain(self,dataframe,number_of_plots=10):
+    def time_freq_domain(dataframe,number_of_plots=10):
         '''
         Plot for time frequency domain
         '''
@@ -146,7 +146,7 @@ class plotMultipleFile():
             fig.tight_layout()
     
     
-    def time_domain(self,dataframe,number_of_plots=10):
+    def time_domain(dataframe,number_of_plots=10):
         '''
         Plot for time domain
         '''
@@ -158,7 +158,7 @@ class plotMultipleFile():
             plt.plot(time,data)
             plt.title('Time Domain'+' '+os.path.basename(files))
                 
-    def freq_domain(self,dataframe,number_of_plots=10):
+    def freq_domain(dataframe,number_of_plots=10):
         '''
         Plot for frequency domain
         '''
@@ -169,7 +169,7 @@ class plotMultipleFile():
             plt.plot(data, np.abs(fft_out))
             plt.title('Frequency Domain'+' '+os.path.basename(files))
                 
-    def waveplot(self,dataframe,number_of_plots=10):
+    def waveplot(dataframe,number_of_plots=10):
         '''
         plot waveplot
         '''
@@ -179,7 +179,7 @@ class plotMultipleFile():
             librosa.display.waveplot(data, sr=sr)
             plt.title('Waveplot'+' '+os.path.basename(files))
         
-    def spectrogram(self,dataframe,number_of_plots=10):
+    def spectrogram(dataframe,number_of_plots=10):
         '''
         Plot spectrogram
         '''
@@ -192,7 +192,7 @@ class plotMultipleFile():
             plt.colorbar()
             plt.title('Spectrogram'+' '+os.path.basename(files))
         
-    def spectral_centroid(self,dataframe,number_of_plots=10):
+    def spectral_centroid(dataframe,number_of_plots=10):
         '''
         Plot Spectral Centroid
         '''
@@ -207,7 +207,7 @@ class plotMultipleFile():
             plt.plot(t, minmax_scale(spectral_centroids,axis=0),color='r')
             plt.title('Spectral Centroid'+' '+os.path.basename(files))
         
-    def spectral_rolloff(self,dataframe,number_of_plots=10):
+    def spectral_rolloff(dataframe,number_of_plots=10):
         '''
         Plot spectral rolloff
         '''
@@ -222,7 +222,7 @@ class plotMultipleFile():
             plt.plot(t, minmax_scale(spectral_rolloff,axis=0), color='r')
             plt.title('Spectral Rolloff'+' '+os.path.basename(files))
     
-    def spectral_brandwidth(self,dataframe,number_of_plots=10):
+    def spectral_brandwidth(dataframe,number_of_plots=10):
         '''
         Plot Spectral brandwidth
         '''
